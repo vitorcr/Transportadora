@@ -51,9 +51,9 @@ public class Garagem {
 
     }
 
-    public void organizaGaragem() {
+    public void organizarGaragem() {
         /* Cria metodo para organizar a garagem de acordo com o seguintes requisitos:
-           Veiculos com maior capacidade de armazenamento primeiro;
+           Veiculos com maior capacidade de armazenamento primeiro.
          */
     }
 
