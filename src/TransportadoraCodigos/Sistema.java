@@ -1,17 +1,25 @@
 package TransportadoraCodigos;
 
 import javax.swing.JOptionPane;
+import TransportadoraTelas.TelaCadastroObjeto;
 
 public class Sistema {
 
     Carga carga = new Carga();
     Garagem garagem = new Garagem();
     Empregados empregados = new Empregados();
+    TelaCadastroObjeto telacadastro = new TelaCadastroObjeto();
 
 //=====================================================================OBJETO===
     public Objeto solicitaObjeto() {
 
-        String nomeRmetente = JOptionPane.showInputDialog("Insira o nome do Remetente.");
+        Objeto obj;
+
+        telacadastro.setVisible(true);
+
+        obj = telacadastro.retornaObjeto();
+
+        /* String nomeRmetente = JOptionPane.showInputDialog("Insira o nome do Remetente.");
         String enderecoRemetente = JOptionPane.showInputDialog("Insira o Endereço Remetente.");
         String nomeDestinatario = JOptionPane.showInputDialog("Insira o Nome Destinatário.");
         String dataDeposito = JOptionPane.showInputDialog("Insira a data de deposito no formato dd/MM/yyyy.");
@@ -25,8 +33,8 @@ public class Sistema {
         obj.setNomeDestinatario(nomeDestinatario);
         obj.setDataDeposito(dataDeposito);
         obj.setPeso(peso);
-        obj.setCodLocalizador(codlocalizador);
-
+        obj.setCodLocalizador(codlocalizador); */
+        
         return obj;
     }
 
@@ -86,6 +94,7 @@ public class Sistema {
         garagem.verVeiculos();
     }
 //==================================================================MOTORISTA===
+
     public Motorista solicitaMotorista() {
         Motorista motorista = new Motorista();
 

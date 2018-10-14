@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Telas2;
+package TELAS2;
 
 import controlador.Objeto;
 import java.util.ArrayList;
@@ -89,7 +89,7 @@ public class ListarObjetos extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jLabel2.setText("ID - Remetente | Endereço do Remetente | Destinatário | Data Depósito | Peso | Cógigo Localizador");
+        jLabel2.setText("ID - Remetente | EndereÃ§o do Remetente | DestinatÃ¡rio | Data DepÃ³sito | Peso | CÃ³gigo Localizador");
 
         btEditar.setText("Editar");
         btEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -172,14 +172,14 @@ public class ListarObjetos extends javax.swing.JFrame {
             }
             int selecionado = lista.getSelectedIndex();// pega o id do selecionado
             System.out.println("selecionado - " + selecionado);
-            listModel.removeElementAt(selecionado);// remove a posição baseado no id do selecionado
+            listModel.removeElementAt(selecionado);// remove a posiï¿½ï¿½o baseado no id do selecionado
             System.out.println("antes - " + listPar);
-            listPar.remove(selecionado);// remove do arraylist baseado na posição do selecionado
+            listPar.remove(selecionado);// remove do arraylist baseado na posiï¿½ï¿½o do selecionado
             System.out.println("depois - " + listPar);
             //limpaLista();
             ListarObjetos novo = new ListarObjetos(listPar);
         } catch (ArrayIndexOutOfBoundsException err) {
-            JOptionPane.showMessageDialog(rootPane, "Selecione alguma opção!", "Erro ao remover da lista", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane, "Selecione alguma opï¿½ï¿½o!", "Erro ao remover da lista", JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_btRemoverActionPerformed

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Telas2;
+package TELAS2;
 
 /**
  *
@@ -34,13 +34,13 @@ public class TelaCadastro extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Que tipo de usu·rio deseja cadastrar?");
+        jLabel1.setText("Que tipo de usu√°rio deseja cadastrar?");
 
         jRadioButton1.setText("Cliente");
 
-        jRadioButton2.setText("Funcion·rio");
+        jRadioButton2.setText("Funcion√°rio");
 
-        jButton1.setText("PrÛximo");
+        jButton1.setText("Pr√≥ximo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

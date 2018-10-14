@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Telas2;
+package TELAS2;
 import controlador.Motoristas;
 import java.util.ArrayList;
 /**
@@ -64,7 +64,7 @@ public class CadastrodeMotorista extends javax.swing.JFrame {
         jLabel2.setText("Data de Nascimento");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jLabel3.setText("Endereço");
+        jLabel3.setText("EndereÃ§o");
 
         btAdicionar.setText("Adicionar");
         btAdicionar.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +119,7 @@ public class CadastrodeMotorista extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jLabel5.setText("Número da CNH");
+        jLabel5.setText("NÃºmero da CNH");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -202,7 +202,7 @@ public class CadastrodeMotorista extends javax.swing.JFrame {
 
     private void btAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAdicionarActionPerformed
         // TODO add your handling code here:
-        System.out.println("posição (cadastro) - " + posicao);
+        System.out.println("posiï¿½ï¿½o (cadastro) - " + posicao);
         Motoristas novo = new Motoristas();
         novo.setData_nascimento_motorista(data_nascimento_motorista.getText());
         novo.setNome_motorista(nome_motorista.getText());

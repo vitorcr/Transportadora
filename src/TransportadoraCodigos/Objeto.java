@@ -7,6 +7,8 @@ package TransportadoraCodigos;
 
 import java.util.Date;
 
+
+
 public class Objeto {
 
     private String nomeRemetente = "";
@@ -25,7 +27,7 @@ public class Objeto {
         this.codLocalizador = obj.getCodLocalizador();
     }
 
-    Objeto() {
+    public Objeto() {
 
     }
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Telas2;
+package TELAS2;
 import controlador.Veiculo;
 import java.util.ArrayList;
 /**
@@ -64,7 +64,7 @@ public class CadastroVeiculos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jLabel1.setText("Tipo de Veículo");
+        jLabel1.setText("Tipo de VeÃ­culo");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel2.setText("Marca");
@@ -103,7 +103,7 @@ public class CadastroVeiculos extends javax.swing.JFrame {
             }
         });
 
-        tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Van", "Caminhão", "Carreta" }));
+        tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Van", "CaminhÃ£o", "Carreta" }));
         tipo.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 tipoFocusLost(evt);
@@ -152,7 +152,7 @@ public class CadastroVeiculos extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jLabel8.setText("Útil");
+        jLabel8.setText("Ãštil");
 
         util.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -258,7 +258,7 @@ public class CadastroVeiculos extends javax.swing.JFrame {
 
     private void btAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAdicionarActionPerformed
         // TODO add your handling code here:
-        System.out.println("posição (cadastro) - " + posicao);
+        System.out.println("posiï¿½ï¿½o (cadastro) - " + posicao);
         Veiculo novo = new Veiculo();
         novo.setTipo((String) tipo.getSelectedItem());
         novo.setMarca(marca.getText());

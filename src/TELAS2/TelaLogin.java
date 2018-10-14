@@ -1,4 +1,4 @@
-package Telas2;
+package TELAS2;
 
 import controlador.Cadastro;
 import java.util.ArrayList;

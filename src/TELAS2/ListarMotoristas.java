@@ -1,33 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Telas2;
+package TELAS2;
 
-import controlador.Veiculo;
+import controlador.Motoristas;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author John
- */
-public class ListarVeiculos extends javax.swing.JFrame {
+public class ListarMotoristas extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ListarVeiculos
-     */
     public DefaultListModel listModel = new DefaultListModel();
-    public ArrayList<Veiculo> listPar = new ArrayList<Veiculo>();
+    public ArrayList<Motoristas> listPar = new ArrayList<Motoristas>();
 
-    public ListarVeiculos() {
-        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+    public ListarMotoristas() {
         initComponents();
     }
 
-    public ListarVeiculos(ArrayList<Veiculo> listRef) {
+    public ListarMotoristas(ArrayList<Motoristas> listRef) {
         listPar = listRef;
         System.out.println("tamanho array - " + listPar.size());
         for (int i = 0; i < listPar.size(); i++) {
@@ -79,7 +67,7 @@ public class ListarVeiculos extends javax.swing.JFrame {
         jScrollPane1.setViewportView(lista);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jLabel1.setText("Lista dos Veículos");
+        jLabel1.setText("Lista de Motoristas");
 
         btRemover.setText("Remover");
         btRemover.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +77,7 @@ public class ListarVeiculos extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jLabel2.setText("ID - Veículos  | Marca | Modelo | Ano | Placa | Capacidade | Carga| Util");
+        jLabel2.setText("ID - Motorista | Nascimento | EndereÃ§o | Tipo-CNH | NÃºmero-CNH");
 
         btEditar.setText("Editar");
         btEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -116,26 +104,27 @@ public class ListarVeiculos extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(64, 64, 64))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btRemover)
-                                .addGap(18, 18, 18)
-                                .addComponent(btEditar)
-                                .addGap(18, 18, 18)
-                                .addComponent(btAdicionar)
-                                .addGap(18, 18, 18)
-                                .addComponent(salvar))))
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1))))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addGap(46, 46, 46)
+                        .addComponent(btRemover)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btEditar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btAdicionar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(salvar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,14 +134,14 @@ public class ListarVeiculos extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btRemover)
                     .addComponent(btEditar)
                     .addComponent(btAdicionar)
                     .addComponent(salvar))
-                .addGap(34, 34, 34))
+                .addGap(18, 18, 18))
         );
 
         pack();
@@ -168,18 +157,18 @@ public class ListarVeiculos extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             for (int i = 0; i < listPar.size(); i++) {
-                System.out.println("lista -" + listPar.get(i).getTipo());
+                System.out.println("lista -" + listPar.get(i));
             }
             int selecionado = lista.getSelectedIndex();// pega o id do selecionado
             System.out.println("selecionado - " + selecionado);
-            listModel.removeElementAt(selecionado);// remove a posição baseado no id do selecionado
+            listModel.removeElementAt(selecionado);// remove a posiÃ§Ã£o baseado no id do selecionado
             System.out.println("antes - " + listPar);
-            listPar.remove(selecionado);// remove do arraylist baseado na posição do selecionado
+            listPar.remove(selecionado);// remove do arraylist baseado na posiÃ§Ã£o do selecionado
             System.out.println("depois - " + listPar);
             //limpaLista();
-            ListarVeiculos novo = new ListarVeiculos(listPar);
+            ListarMotoristas novo = new ListarMotoristas(listPar);
         } catch (ArrayIndexOutOfBoundsException err) {
-            JOptionPane.showMessageDialog(rootPane, "Selecione alguma opção!", "Erro ao remover da lista", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane, "Selecione alguma opï¿½ï¿½o!", "Erro ao remover da lista", JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_btRemoverActionPerformed
@@ -193,15 +182,15 @@ public class ListarVeiculos extends javax.swing.JFrame {
     private void btEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarActionPerformed
         // TODO add your handling code here:
         int selecionado = lista.getSelectedIndex();
-        System.out.println("selecionado (listar) - " + selecionado);
-        CadastroVeiculos edit = new CadastroVeiculos(listPar, selecionado);
+        System.out.println("selecionado (Editar) - " + selecionado);
+        CadastrodeMotorista edit = new CadastrodeMotorista(listPar, selecionado);
         setVisible(false);
         edit.setVisible(true);
     }//GEN-LAST:event_btEditarActionPerformed
 
     private void btAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAdicionarActionPerformed
         // TODO add your handling code here:
-        CadastroVeiculos add = new CadastroVeiculos(listPar, 1000);
+        CadastrodeMotorista add = new CadastrodeMotorista(listPar, 1000);
         setVisible(false);
         add.setVisible(true);
     }//GEN-LAST:event_btAdicionarActionPerformed
@@ -229,13 +218,13 @@ public class ListarVeiculos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ListarVeiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarMotoristas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ListarVeiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarMotoristas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ListarVeiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarMotoristas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ListarVeiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarMotoristas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -245,7 +234,7 @@ public class ListarVeiculos extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ListarVeiculos().setVisible(true);
+                new ListarMotoristas().setVisible(true);
             }
         });
     }

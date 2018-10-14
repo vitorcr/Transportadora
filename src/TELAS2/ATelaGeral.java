@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Telas2;
+package TELAS2;
 
 
 /**
@@ -40,10 +40,10 @@ public class ATelaGeral extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 25)); // NOI18N
-        jLabel1.setText("Transportadora Entrega Rápida");
+        jLabel1.setText("Transportadora Entrega RÃ¡pida");
 
         cadastrarEquipamento.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        cadastrarEquipamento.setText("Cadastro de Veículos");
+        cadastrarEquipamento.setText("Cadastro de VeÃ­culos");
         cadastrarEquipamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastrarEquipamentoActionPerformed(evt);

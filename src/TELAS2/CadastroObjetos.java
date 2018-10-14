@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Telas2;
+package TELAS2;
 import controlador.Objeto;
 import static java.awt.image.ImageObserver.HEIGHT;
 import static java.awt.image.ImageObserver.WIDTH;
@@ -66,10 +66,10 @@ public class CadastroObjetos extends javax.swing.JFrame {
         jLabel1.setText("Nome do Remetente");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jLabel2.setText("Endereço do Remetente");
+        jLabel2.setText("EndereÃ§o do Remetente");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jLabel3.setText("Nome do Destinatário");
+        jLabel3.setText("Nome do DestinatÃ¡rio");
 
         btAdicionar.setText("Adicionar");
         btAdicionar.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +103,7 @@ public class CadastroObjetos extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jLabel4.setText("Data de Depósito");
+        jLabel4.setText("Data de DepÃ³sito");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel5.setText("Peso");
@@ -134,7 +134,7 @@ public class CadastroObjetos extends javax.swing.JFrame {
         });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jLabel7.setText("Código de Localizador");
+        jLabel7.setText("CÃ³digo de Localizador");
 
         try {
             codLocalizador.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####-#")));
@@ -260,8 +260,10 @@ public class CadastroObjetos extends javax.swing.JFrame {
     
     private void btAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAdicionarActionPerformed
         // TODO add your handling code here:
-        System.out.println("posição (cadastro) - " + posicao);
+        System.out.println("posiï¿½ï¿½o (cadastro) - " + posicao);
+        
         Objeto novo = new Objeto();
+        
         novo.setCodLocalizador(codLocalizador.getText());
         novo.setEnderecoRemetente(enderecoRemetente.getText());
         novo.setPeso(peso.getText());

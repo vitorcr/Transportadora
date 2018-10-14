@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Telas2;
+package TELAS2;
 
 /**
  *
@@ -65,7 +65,7 @@ public class TelaJuridico extends javax.swing.JFrame {
 
         jLabel2.setText("CNPJ");
 
-        jLabel6.setText("Endereço");
+        jLabel6.setText("EndereÃ§o");
 
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -75,7 +75,7 @@ public class TelaJuridico extends javax.swing.JFrame {
 
         jLabel11.setText("Rua:");
 
-        jLabel12.setText("Nº:");
+        jLabel12.setText("NÂº:");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
